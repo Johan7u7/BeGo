@@ -2,6 +2,8 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import app from './app.js';
 import truckRoutes from './routes/trucksRoutes.js';  // Importa tus rutas de trucks
+import express from 'express';
+
 
 dotenv.config();
 
