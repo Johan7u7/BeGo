@@ -125,7 +125,7 @@ export const getTrucks = async (req: Request, res: Response, next: NextFunction)
 // Obtener un truck por ID
 export const getTruckById = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-        const truck = await Truck.findById(req.params.id).populate('name', 'email');
+        const truck = await Truck.findById(req.params.id).populate('user', 'name email');
         if (!truck) {
             res.status(404).json({ message: 'Truck not found' });
             return;
