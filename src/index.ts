@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import express from 'express';
-import userRoutes from './routes/userRoutes'; // Asegúrate de importar las rutas
+import userRoutes from './routes/userRoutes.js'; // Asegúrate de importar las rutas
 
 dotenv.config();
 
