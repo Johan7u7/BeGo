@@ -190,4 +190,8 @@ CRUD completo para cada dominio, con validaciones específicas.
 
 ¡Gracias por revisar este proyecto!
 
+*** Dejo la coleccion de POSTMAN para su correcta revision ***
+
+BeGo.postman_collection.json
+
 Johan Ali Leon Miranda 👍

@@ -1,8 +1,8 @@
 import mongoose, { Document, Schema } from 'mongoose';
-import User from './userModel.js';  // Ruta correcta al archivo de User
-import { ITruck } from '../interfaces/ITruck';  // Importando la interfaz de Truck
+import User from './userModel.js';
+import { ITruck } from '../interfaces/ITruck';
 
-console.log('Modelo User:', User);  // Log para verificar si el modelo User está cargado correctamente
+
 
 const TruckSchema = new Schema<ITruck>({
     user: {
@@ -29,6 +29,6 @@ const TruckSchema = new Schema<ITruck>({
 
 const Truck = mongoose.model<ITruck>('Truck', TruckSchema);
 
-console.log('Modelo Truck creado:', Truck);  // Log para verificar si el modelo Truck está creado
+console.log('Modelo Truck creado:', Truck);
 
 export default Truck;

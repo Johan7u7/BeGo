@@ -8,7 +8,6 @@ dotenv.config();
 const comprobarToken = (userToken: string): any => {
     try {
         // Verificación síncrona del token utilizando la clave secreta desde .env
-        console.log('La clave secreta es:', process.env.JWT_SECRET || 'default_secret');
         const decoded = jwt.verify(userToken, process.env.JWT_SECRET || 'default_secret');
         return decoded; // Devuelve el token decodificado si es válido
     } catch (err) {

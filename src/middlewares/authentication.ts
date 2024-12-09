@@ -1,4 +1,4 @@
-import tokenApi from '../utils/token.js';  // Importa tu función para verificar tokens
+import tokenApi from '../utils/token.js';
 const BASE_URL = process.env.BASE_API || '/api/trucks';
 import { Request, Response, NextFunction } from 'express';
 import dotenv from 'dotenv';
@@ -23,9 +23,9 @@ export const castToError = (error: any): Error => {
 export const validateHeader = (req: Request, res: Response, next: NextFunction): void => {
     try {
         const authHeader: string | undefined = req.headers['authorization'];
-        console.log(`Auth Header: ${authHeader}`);  // Log the authorization header
+
         const token: string | undefined = authHeader?.split(' ')[1];
-        console.log(`Token from Header: ${token}`);  // Log the extracted token
+
 
         if (!token) {
             console.log(ERROR_MESSAGES.NO_TOKEN_PROVIDED);
@@ -36,7 +36,7 @@ export const validateHeader = (req: Request, res: Response, next: NextFunction):
         req.token = token;
         next();
     } catch (error) {
-        console.error(`Error in validateHeader: ${error}`);  // Log the error
+        console.error(`Error in validateHeader: ${error}`);
         handleError(res, error, 500);
     }
 };
@@ -44,7 +44,7 @@ export const validateHeader = (req: Request, res: Response, next: NextFunction):
 export const verifyJWT = (req: Request, res: Response, next: NextFunction): void => {
     try {
         const token: string | undefined = req.token;
-        console.log(`Token to Verify: ${token}`);  // Log the token to be verified
+
 
         if (!token) {
             console.log(ERROR_MESSAGES.NO_TOKEN_PROVIDED);
@@ -53,7 +53,7 @@ export const verifyJWT = (req: Request, res: Response, next: NextFunction): void
         }
 
         const decoded: any = jwt.verify(token, process.env.JWT_SECRET as string);
-        console.log(`Decoded Token: ${JSON.stringify(decoded)}`);  // Log the decoded token
+
 
         if (typeof decoded === 'object' && decoded !== null && 'userId' in decoded) {
             req.userId = (decoded as { userId: string }).userId;
@@ -77,16 +77,14 @@ export const verificaToken = async (req: Request, res: Response, next: NextFunct
         const { method, route, headers } = req;  // Desestructuración para hacer el código más limpio
         let userToken = headers.idsession;  // Token enviado en el encabezado 'idsession'
 
-        // Log: Verifica el token recibido
-        console.log('Token recibido en el encabezado "idsession":', userToken);
+
 
         // Verifica si userToken es un arreglo, toma el primer valor si es el caso
         if (Array.isArray(userToken)) {
             userToken = userToken[0];
         }
 
-        // Log: Verifica el tipo de token
-        console.log('Token después de verificar su tipo:', userToken);
+
 
         // Si el userToken es undefined o no es un string, devuelve error
         if (typeof userToken !== 'string') {
@@ -104,8 +102,7 @@ export const verificaToken = async (req: Request, res: Response, next: NextFunct
 
         const idUser = headers.identificador_usuario as string;
 
-        // Log: Verifica si el identificador de usuario está presente
-        console.log('Identificador de usuario recibido:', idUser);
+
 
         // Verificar si se pasó el id del usuario
         if (!idUser) {
@@ -136,14 +133,11 @@ export const verificaToken = async (req: Request, res: Response, next: NextFunct
             return;
         }
 
-        // Log: Verifica si la clave secreta está correctamente cargada
-        console.log('Clave secreta JWT cargada correctamente.');
+
 
         // Verificación del token
         const decoded = tokenApi.comprobarToken(userToken);  // Verifica el token con la clave de .env
 
-        // Log: Verifica si el token es válido o no
-        console.log('Decoded token:', decoded);
 
         if (decoded) {
             const fullUrl = `${BASE_URL}${route.path}`;
