@@ -3,7 +3,8 @@ import dotenv from 'dotenv';
 import express from 'express';
 import userRoutes from './routes/userRoutes.js';
 import truckRoutes from './routes/trucksRoutes.js';
-import locationRoutes from './routes/locationRoutes.js'; // Corregimos la importación de las rutas de ubicaciones
+import locationRoutes from './routes/locationRoutes.js';
+import orderRoutes from './routes/orderRoutes.js'; // Importa las rutas de órdenes
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ mongoose.connect(MONGO_URI)
     app.use('/api/users', userRoutes);  // Rutas de usuarios
     app.use('/api/trucks', truckRoutes);  // Rutas de camiones
     app.use('/api/locations', locationRoutes);  // Rutas de ubicaciones
+    app.use('/api/orders', orderRoutes);  // Rutas de órdenes
 
     // Configurar el puerto y el servidor
     const PORT = process.env.PORT || 3000;
@@ -49,6 +51,12 @@ mongoose.connect(MONGO_URI)
       console.log(`   GET: http://localhost:${PORT}/api/locations/list - Obtener todas las ubicaciones`);
       console.log(`   PUT: http://localhost:${PORT}/api/locations/:id/update - Actualizar una ubicación`);
       console.log(`   DELETE: http://localhost:${PORT}/api/locations/:id/delete - Eliminar una ubicación`);
+
+      console.log(`--- Órdenes ---`);
+      console.log(`   POST: http://localhost:${PORT}/api/orders/create - Crear una nueva orden`);
+      console.log(`   GET: http://localhost:${PORT}/api/orders/:id - Obtener una orden por su ID`);
+      console.log(`   PUT: http://localhost:${PORT}/api/orders/:id/update - Actualizar una orden`);
+      console.log(`   DELETE: http://localhost:${PORT}/api/orders/:id/delete - Eliminar una orden`);
     });
   })
   .catch(err => {

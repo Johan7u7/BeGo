@@ -77,7 +77,7 @@ export const createLocation = async (req: Request, res: Response, next: NextFunc
             respuesta = {
                 ...respuesta,
                 codigo: HTTP_CODIGOS._400.contexto._012.codigo,
-                mensaje: 'place_id es requerido.',
+                mensaje: '',
             };
             res.status(400).json(respuesta);
             return;
@@ -172,7 +172,7 @@ export const getLocationById = async (req: Request, res: Response, next: NextFun
     }
 };
 
-export const updateLocation = async (req: Request, res: Response<any>, next: NextFunction): Promise<Response<any>> => {
+export const updateLocation = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
         // Obtener el ID de la ubicación registrada desde la URL
         const locationId = req.params.id;
@@ -182,7 +182,8 @@ export const updateLocation = async (req: Request, res: Response<any>, next: Nex
 
         // Validar que se haya enviado un place_id
         if (!place_id) {
-            return res.status(400).json({ message: 'El place_id es obligatorio' });
+            res.status(400).json({ message: 'El place_id es obligatorio' });
+            return;
         }
 
         // Llamar a la API de Maps para obtener los detalles de la ubicación usando el place_id
@@ -191,7 +192,8 @@ export const updateLocation = async (req: Request, res: Response<any>, next: Nex
 
         // Verificar si se obtuvo la información correctamente
         if (!mapData || mapData.status !== 'OK') {
-            return res.status(404).json({ message: 'No se pudo obtener la información del lugar con el place_id proporcionado' });
+            res.status(404).json({ message: 'No se pudo obtener la información del lugar con el place_id proporcionado' });
+            return;
         }
 
         // Crear el objeto con la información a actualizar (por ejemplo, address, latitude, longitude)
@@ -206,15 +208,14 @@ export const updateLocation = async (req: Request, res: Response<any>, next: Nex
 
         // Si no se encontró la ubicación con ese ID
         if (!updatedLocation) {
-            return res.status(404).json({ message: 'Ubicación no encontrada con el ID proporcionado' });
+            res.status(404).json({ message: 'Ubicación no encontrada con el ID proporcionado' });
+            return;
         }
 
         // Devolver la ubicación actualizada
-        return res.status(200).json(updatedLocation);
-    } catch (error) {
+        res.status(200).json(updatedLocation);
+    } catch (error: any) {
         next(error); // Pasamos el error al manejador global de errores
-        // Asegúrate de que si hay un error, la función se maneje correctamente.
-        return res.status(500).json({ message: 'Error en el servidor' });
     }
 };
 

@@ -107,25 +107,21 @@ const locationEsquema = {
 const orderEsquema = {
     type: "object",
     properties: {
-        user: {
-            type: "string", // ID de usuario
-            pattern: regexPatternString,
-        },
         truck: {
             type: "string", // ID de camión
             pattern: regexPatternString,
         },
         status: {
             type: "string", // Estado de la orden
-            enum: ["pending", "in-progress", "completed"], // Estados posibles de la orden
+            enum: ["pending", "in-progress", "completed", "created", "shipped"], // Estados posibles de la orden
         },
         delivery_date: {
             type: "string", // Fecha de entrega
-            format: "date", // Validación de formato de fecha
+
         },
     },
-    required: ["user", "truck", "status", "delivery_date"], // Todos los campos son obligatorios
-    additionalProperties: false, // No permitir propiedades adicionales
+    required: ["truck", "status", "delivery_date"], // Ahora solo estos son obligatorios
+    additionalProperties: true, // No permitir propiedades adicionales
 };
 
 // Exportar todos los esquemas
