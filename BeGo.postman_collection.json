@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"name\":\"Johan Ali\",\r\n\"email\":\"johan12@gmail.com\",\r\n\"password\":\"Picolin123*\"\r\n}\r\n",
+							"raw": "{\r\n\"name\":\"Luis Gueas\",\r\n\"email\":\"Luis@gmail.com\",\r\n\"password\":\"Picolin123*\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -53,7 +53,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"email\":\"johan12@gmail.com\",\r\n\"password\":\"Picolin123*\"\r\n}\r\n",
+							"raw": "{\r\n\"email\":\"johan123ali@gmail.com\",\r\n\"password\":\"Picolin123*\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -61,12 +61,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/users/login",
+							"raw": "http://localhost:5001/api/users/login",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "5001",
 							"path": [
 								"api",
 								"users",
@@ -88,12 +88,12 @@
 						"header": [
 							{
 								"key": "idsession",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzU0YzFhMjcyNWJkNjRmNDgyYzkwYTAiLCJpYXQiOjE3MzM2MzkyMzAsImV4cCI6MTczMzY0MjgzMH0.UoQ-qzTmm__1aOLjS9f3r5ZN7ZyoUIXUlcVLBOyWLS4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzUzNTM1ZmY1MmNmNDhhYjEzODQzYTEiLCJpYXQiOjE3MzQxNDY1MjksImV4cCI6MTczNDE1MDEyOX0.m_b7ZJVSr46UjfrUTYhu8W0AjPTUeX_FTYt25t3eaA4",
 								"type": "text"
 							},
 							{
 								"key": "identificador_usuario",
-								"value": "6754c1a2725bd64f482c90a0",
+								"value": "675c8712e5a075d5f7d1c260",
 								"type": "text"
 							},
 							{
@@ -104,7 +104,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"year\": \"2024\", \r\n    \"color\": \"red\",\r\n    \"plates\": \"PICO123\"\r\n}\r\n",
+							"raw": "{\r\n    \"year\": \"2024\", \r\n    \"color\": \"red\",\r\n    \"plates\": \"PACS154\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -112,12 +112,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/trucks/create",
+							"raw": "http://localhost:5001/api/trucks/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "5001",
 							"path": [
 								"api",
 								"trucks",
@@ -142,12 +142,12 @@
 							},
 							{
 								"key": "identificador_usuario",
-								"value": "6754c1a2725bd64f482c90a0",
+								"value": "675c8712e5a075d5f7d1c260",
 								"type": "text"
 							},
 							{
 								"key": "idsession",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzU0YzFhMjcyNWJkNjRmNDgyYzkwYTAiLCJpYXQiOjE3MzM2NzQ3NzMsImV4cCI6MTczMzY3ODM3M30.81ZdxZwdrm6aOsxFt4E5DUhfFD_sYOmv7Q-IGn4FRts",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzVjODcxMmU1YTA3NWQ1ZjdkMWMyNjAiLCJpYXQiOjE3MzQxMTcxNTYsImV4cCI6MTczNDEyMDc1Nn0.GAG7-LFX14toOdc9Idq6ZoybjsDvZAxBcY-SairLFEgbBKG9tbnJ8",
 								"type": "text"
 							}
 						],
@@ -230,7 +230,7 @@
 							},
 							{
 								"key": "idsession",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzU0YzFhMjcyNWJkNjRmNDgyYzkwYTAiLCJpYXQiOjE3MzM2Mzc4MjksImV4cCI6MTczMzY0MTQyOX0.TnPzSnzGugD2boThZGdzcjekgBBzYc9q9RWZCX1oyVg",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzU2MDkyNjQ3MzhiOGQ3NzMxMDJiY2UiLCJpYXQiOjE3MzM2OTE3MTQsImV4cCI6MTczMzY5NTMxNH0.wLyeczFlWAtmf7-2J6l-XPMWrKgEMsvxwmMqdCr5jZk",
 								"type": "text"
 							},
 							{
@@ -242,7 +242,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"year\": \"2020\",\r\n  \"color\": \"Blue\",\r\n  \"plates\": \"ABC1234\"\r\n}\r\n",
+							"raw": "{\r\n  \"year\": \"2025\",\r\n  \"color\": \"Blue\",\r\n  \"plates\": \"ias745\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -250,16 +250,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/trucks/67552c11911a04c295d4dfea/update",
+							"raw": "http://localhost:5002/api/trucks/675609de316723ecdeb92f16/update",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "5002",
 							"path": [
 								"api",
 								"trucks",
-								"67552c11911a04c295d4dfea",
+								"675609de316723ecdeb92f16",
 								"update"
 							]
 						}
@@ -307,6 +307,385 @@
 								"delete"
 							]
 						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "idsession",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzUzNTM1ZmY1MmNmNDhhYjEzODQzYTEiLCJpYXQiOjE3MzQxNDY1MjksImV4cCI6MTczNDE1MDEyOX0.m_b7ZJVSr46UjfrUTYhu8W0AjPTUeX_FTYt25t3eaA4",
+								"type": "text"
+							},
+							{
+								"key": "identificador_usuario",
+								"value": "6753535ff52cf48ab13843a1",
+								"type": "text"
+							},
+							{
+								"key": "nombre_aplicativo",
+								"value": "Postman",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"place_id\": \"ChIJsUDXn2od0oURpAnsjV2k44A\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/locations/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"locations",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "idsession",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzUzNTM1ZmY1MmNmNDhhYjEzODQzYTEiLCJpYXQiOjE3MzQxNDY1MjksImV4cCI6MTczNDE1MDEyOX0.m_b7ZJVSr46UjfrUTYhu8W0AjPTUeX_FTYt25t3eaA4",
+								"type": "text"
+							},
+							{
+								"key": "identificador_usuario",
+								"value": "6753535ff52cf48ab13843a1",
+								"type": "text"
+							},
+							{
+								"key": "nombre_aplicativo",
+								"value": "Postman",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/api/locations/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"locations",
+								"list"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzUzNTM1ZmY1MmNmNDhhYjEzODQzYTEiLCJpYXQiOjE3MzQxMzgyODUsImV4cCI6MTczNDE0MTg4NX0.LUnVjwcQPykx49bglmM7TsYtyhA6b7azFTa5_SEG6CM",
+									"disabled": true
+								},
+								{
+									"key": "identificador_usuario",
+									"value": "6753535ff52cf48ab13843a1",
+									"disabled": true
+								},
+								{
+									"key": "nombre_aplicativo",
+									"value": "Postman",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Especific",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "idsession",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzUzNTM1ZmY1MmNmNDhhYjEzODQzYTEiLCJpYXQiOjE3MzQxMzgyODUsImV4cCI6MTczNDE0MTg4NX0.LUnVjwcQPykx49bglmM7TsYtyhA6b7azFTa5_SEG6CM",
+								"type": "text"
+							},
+							{
+								"key": "identificador_usuario",
+								"value": "6753535ff52cf48ab13843a1",
+								"type": "text"
+							},
+							{
+								"key": "nombre_aplicativo",
+								"value": "Postman",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/api/locations/675cd9bc09a555cd84a0b48a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"locations",
+								"675cd9bc09a555cd84a0b48a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idsession",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzUzNTM1ZmY1MmNmNDhhYjEzODQzYTEiLCJpYXQiOjE3MzQxNDEwNTcsImV4cCI6MTczNDE0NDY1N30.ljiTUZgRa8PyHwdZA15XhHl3lydaZifHLK0afL7s0rM",
+								"type": "text"
+							},
+							{
+								"key": "identificador_usuario",
+								"value": "6753535ff52cf48ab13843a1",
+								"type": "text"
+							},
+							{
+								"key": "nombre_aplicativo",
+								"value": "Postman",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"place_id\": \"ChIJN1t_tDeuEmsRUsoyGzRykpQ\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/locations/675ce54095479b23a2282ca7/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"locations",
+								"675ce54095479b23a2282ca7",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "idsession",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzUzNTM1ZmY1MmNmNDhhYjEzODQzYTEiLCJpYXQiOjE3MzQxMzgyODUsImV4cCI6MTczNDE0MTg4NX0.LUnVjwcQPykx49bglmM7TsYtyhA6b7azFTa5_SEG6CM",
+								"type": "text"
+							},
+							{
+								"key": "identificador_usuario",
+								"value": "6753535ff52cf48ab13843a1",
+								"type": "text"
+							},
+							{
+								"key": "nombre_aplicativo",
+								"value": "Postman",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/api/locations/675cd9bc09a555cd84a0b48a/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"locations",
+								"675cd9bc09a555cd84a0b48a",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "idsession",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzUzNTM1ZmY1MmNmNDhhYjEzODQzYTEiLCJpYXQiOjE3MzQxNTMyMTYsImV4cCI6MTczNDE1NjgxNn0.2GF4M8KIvQTL1I3vb28SiH9UeQituIzctbsR4kvTZaA",
+								"type": "text"
+							},
+							{
+								"key": "identificador_usuario",
+								"value": "6753535ff52cf48ab13843a1",
+								"type": "text"
+							},
+							{
+								"key": "nombre_aplicativo",
+								"value": "Postman",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"truck\": \"675cfa63037f595239bd37f3\",\r\n    \"status\": \"created\",\r\n    \"delivery_date\": \"2024-12-20T12:00:00Z\",\r\n    \"pickup\": \"675ce54095479b23a2282ca7\",      \r\n    \"dropoff\": \"675cfd1c2c00ff7b657088fd\"      \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/orders/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"orders",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "idsession",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzUzNTM1ZmY1MmNmNDhhYjEzODQzYTEiLCJpYXQiOjE3MzQxOTI1MjUsImV4cCI6MTczNDE5NjEyNX0.woqSr0ItWyH7LotNDhSB823EDaGWTjVvHKvO2sfDKQ8",
+								"type": "text"
+							},
+							{
+								"key": "identificador_usuario",
+								"value": "6753535ff52cf48ab13843a1",
+								"type": "text"
+							},
+							{
+								"key": "nombre_aplicativo",
+								"value": "Postman",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/api/orders/675d1fc8be4358feee45f955",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"orders",
+								"675d1fc8be4358feee45f955"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Especific",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idsession",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzUzNTM1ZmY1MmNmNDhhYjEzODQzYTEiLCJpYXQiOjE3MzQxOTI1MjUsImV4cCI6MTczNDE5NjEyNX0.woqSr0ItWyH7LotNDhSB823EDaGWTjVvHKvO2sfDKQ8",
+								"type": "text"
+							},
+							{
+								"key": "identificador_usuario",
+								"value": "6753535ff52cf48ab13843a1",
+								"type": "text"
+							},
+							{
+								"key": "nombre_aplicativo",
+								"value": "Postman",
+								"type": "text"
+							}
+						]
+					},
+					"response": []
+				},
+				{
+					"name": "EditStatus",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "idsession",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzUzNTM1ZmY1MmNmNDhhYjEzODQzYTEiLCJpYXQiOjE3MzQxOTI1MjUsImV4cCI6MTczNDE5NjEyNX0.woqSr0ItWyH7LotNDhSB823EDaGWTjVvHKvO2sfDKQ8",
+								"type": "text"
+							},
+							{
+								"key": "identificador_usuario",
+								"value": "6753535ff52cf48ab13843a1",
+								"type": "text"
+							},
+							{
+								"key": "nombre_aplicativo",
+								"value": "Postman",
+								"type": "text"
+							}
+						]
 					},
 					"response": []
 				}
